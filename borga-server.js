@@ -21,8 +21,8 @@ app.set('view engine', 'hbs');
 app.use('/api',borgaWebApiRouter)
 app.use('/',borgaSiteRouter)
 app.use('/',authUiRouter)
-console.log(process.argv[2])
-app.listen(process.argv[2] || DEFAULT_PORT , ()=> console.log('Example app listening at http://localhost:' + DEFAULT_PORT))
+console.log(process.env.PORT)
+app.listen(process.env.PORT || DEFAULT_PORT , ()=> console.log('Example app listening at http://localhost:' + DEFAULT_PORT))
 
 ///const borgaWebApiRouter = require('./borga-web-api')(express.Router(),borgaServices)
 
