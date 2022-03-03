@@ -11,7 +11,7 @@
         {{/if}}
     </head>
     <body id= "areabody">
-        	<div id = "area-cabecalho" >
+        <div id = "area-cabecalho" >
 			<div>
 				<h1>Borga <span>Games</span></h1>
 			</div>
@@ -21,14 +21,13 @@
 				<a href="/Groups">Grupos</a>
 				<a href="/Popular%20games">Jogos Populares</a>
                 {{#if username}}
-                    <br>
                     <form method="post" action="/logout" class="formCenter">
                         Username : {{username}}
                         <input type="submit" value="Terminar sessão">
                     </form>
 		       {{else}}
-             <a href="/login" > Entrar </a>
-		{{/if}}
+                    <a href="/login" > Entrar </a>
+		        {{/if}}
 			</div>
 		</div>
    
