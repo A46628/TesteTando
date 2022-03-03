@@ -86,7 +86,9 @@ function createNewGroup(name, description, userId){
 
 function getGroup(userId) {
     const allgroup = groups.filter(g => g.userId == userId )
-    if(!allgroup || allgroup.length == 0) return Promise.reject(errors.NOT_GROUP(userId))
+    console.log("vendo o all grupo em analize")
+    console.log(allgroup)
+  //  if(!allgroup || allgroup.length == 0) return Promise.reject(errors.NOT_GROUP(userId))
     return Promise.resolve(allgroup)
 }
 

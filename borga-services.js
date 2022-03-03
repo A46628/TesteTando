@@ -45,7 +45,6 @@ module.exports = function(borgaDataMen) {
                 .createNewUser(name, password)
                 .then(newUser => {
                    console.log(newUser)
-                   console.log("sera que entra neste codigo")
                    return  Promise.resolve(newUser)})
                 .catch(error =>{ 
                     console.log(error)
@@ -75,8 +74,10 @@ module.exports = function(borgaDataMen) {
         return borgaDataMen
                  .getTokenUser((token))
                  .then( user =>{
+                     console.log(user)
                     return borgaDataMen.getGroup(user.id)})
                  .catch(error => {
+                     console.log(error)
                     if(error.length  == 5)
                         {
                             return Promise.reject(errors.ERROR_SERVIDOR())
@@ -86,7 +87,7 @@ module.exports = function(borgaDataMen) {
                             return Promise.reject(errors.NOT_AUTHORIZE())
                         }
                 })
-                  // mudar depois tem ki ser o id não o token
+              
                  
                           
     }
